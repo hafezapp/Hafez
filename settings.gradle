@@ -1,0 +1,1 @@
+include ':app', ':libs:libsodium-jni-aar-1.0.3', ':cucumbertests'

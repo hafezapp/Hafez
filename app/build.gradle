@@ -1,0 +1,209 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'android-apt'
+apply plugin: 'io.fabric'
+
+android {
+
+    defaultConfig {
+        applicationId "org.hrana.hafez"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 90
+        versionName "0.9.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    publishNonDefault true
+
+    signingConfigs {
+        release
+    }
+
+    flavorDimensions 'api'
+
+    productFlavors {
+        hranews {
+            dimension 'api'
+        }
+        unblock {
+            dimension 'api'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-annotations:$supportLibVersion"
+        resolutionStrategy.force "com.android.support:support-compat:$supportLibVersion"
+    }
+
+    android {
+        sourceSets {
+            String sharedTestJavaDir = 'src/sharedTest/java'
+
+            test {
+                java.srcDirs += [sharedTestJavaDir]
+            }
+
+            androidTest {
+                java.srcDirs += [sharedTestJavaDir]
+                resources.srcDirs += ['src/test/resources']
+            }
+        }
+    }
+
+    // File naming
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def fileNaming = "apk/hafez-app.apk"
+            output.outputFile = new File(getProject().getRootDir(), "${fileNaming}")
+        }
+    }
+}
+
+// Signing -- load signing config into new Properties file
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file("signing.properties")
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+    if (keystoreProperties != null && keystoreProperties.containsKey('releaseKeyAlias')
+            && keystoreProperties.containsKey('releaseKeyPassword')
+            && keystoreProperties.containsKey('releaseKeyStoreFile')
+            && keystoreProperties.containsKey('releaseKeyStorePassword')) {
+        android.signingConfigs.release.keyAlias keystoreProperties['releaseKeyAlias']
+        android.signingConfigs.release.keyPassword keystoreProperties['releaseKeyPassword']
+        android.signingConfigs.release.storeFile file(keystoreProperties['releaseKeyStoreFile'])
+        android.signingConfigs.release.storePassword keystoreProperties['releaseKeyStorePassword']
+    } else {
+        println('signing.properties missing some important configurations, please build in debug mode only.')
+        android.buildTypes.release.signingConfig = null
+    }
+
+} else {
+    println('signing.properties not found, please build in debug mode only.')
+    android.buildTypes.release.signingConfig = null
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':libs:libsodium-jni-aar-1.0.3')
+
+    testCompile 'junit:junit:4.12'
+
+    androidTestCompile "com.android.support:support-annotations:$supportLibVersion"
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:' + rootProject.ext.espressoVersion
+
+    // Dagger2 for instrumentation testing
+    androidTestApt 'com.google.dagger:dagger-compiler:2.8'
+
+    androidTestCompile("com.android.support.test:runner:$testRunnerVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile "com.android.support.test:rules:$testRunnerVersion"
+
+    // Espresso
+    androidTestCompile('com.android.support.test.espresso:espresso-core:' + rootProject.ext.espressoVersion, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+    compile 'com.google.firebase:firebase-core:' + rootProject.ext.gmsVersion
+
+    // GreenCoffee (scenario-based espresso)
+    androidTestCompile 'com.mauriciotogneri:greencoffee:2.0.1'
+
+    compile "com.android.support:appcompat-v7:$supportLibVersion"
+    compile "com.android.support:design:$supportLibVersion"
+    compile "com.android.support:cardview-v7:$supportLibVersion"
+
+    // Dagger2
+    apt "com.google.dagger:dagger-compiler:$daggerVersion"
+    compile "com.google.dagger:dagger:$daggerVersion"
+    provided 'javax.annotation:jsr250-api:1.0'
+
+    // Butterknife
+    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+    // RxAndroid, RxJava Retrofit adapter
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    // HTTPLoggingInterceptor
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+
+    // NetCipher
+    compile 'info.guardianproject.netcipher:netcipher:2.0.0-alpha1'
+    compile 'info.guardianproject.netcipher:netcipher-okhttp3:2.0.0-alpha1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+
+    // Circle imageview for contacts
+    compile 'com.makeramen:roundedimageview:2.3.0'
+
+    // Lombok
+    provided "org.projectlombok:lombok:1.12.6"
+
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.google.code.gson:gson:2.6.1'
+
+    // Moshi (Json adapter)
+    compile 'com.squareup.moshi:moshi:1.3.1'
+    compile 'com.squareup.retrofit2:converter-moshi:2.1.0'
+
+    // Mockito
+    testCompile "org.mockito:mockito-core:2.+"
+
+    // FlexBox (tags)
+    compile 'com.google.android:flexbox:0.2.5'
+
+    // Tutorial
+    compile 'com.getkeepsafe.taptargetview:taptargetview:1.9.1'
+
+    // Custom fonts
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    // AWS updates
+    compile 'com.amazonaws:aws-android-sdk-core:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
+
+    // Play services
+    compile 'com.google.android.gms:play-services-analytics:' + rootProject.ext.gmsVersion
+    compile 'com.google.android.gms:play-services-gcm:' + rootProject.ext.gmsVersion
+}
+
+apply plugin: 'com.google.gms.google-services' // Analytics

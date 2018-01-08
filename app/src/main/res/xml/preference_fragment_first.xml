@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_main">
+        <Preference
+            android:key="@string/onboarding_complete_key"
+            android:title="@string/view_onboarding_again" />
+        <Preference
+            android:key="@string/uninstall_options_key"
+            android:summary="@string/set_uninstall_options"
+            android:title="@string/uninstall_options" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_network">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/upload_over_data_key"
+            android:summary="@string/upload_over_data_summary"
+            android:title="@string/upload_over_data" />
+        <!--<SwitchPreference-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/restrict_access_tor_key"-->
+            <!--android:summary="@string/restrict_access_tor_summary"-->
+            <!--android:title="@string/restrict_access_tor" />-->
+    </PreferenceCategory>
+
+</PreferenceScreen>

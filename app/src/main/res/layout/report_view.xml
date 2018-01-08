@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/submit_report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/submit_report"
+        android:textColor="@color/colorPrimary"
+        android:textDirection="locale"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scrollview_report_height"
+        android:layout_below="@+id/submit_report_title"
+        android:layout_above="@+id/attachment_divider">
+
+        <EditText
+            android:id="@+id/reportBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dip"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_what_happened"
+            android:textDirection="rtl"
+            android:gravity="top"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/attachment_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/media_recyclerView"
+        android:layout_margin="@dimen/inner_card_padding"
+        android:background="@color/white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/media_recyclerView"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="false"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/attachment_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/activity_row_padding"
+        android:layout_marginEnd="100dip"
+        android:layout_marginTop="@dimen/activity_row_padding"
+        android:layout_marginBottom="@dimen/activity_row_padding"/>
+
+</RelativeLayout>

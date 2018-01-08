@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hrana.hafez.view.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/container"
+            android:background="?attr/colorPrimary"
+            android:layoutDirection="ltr"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="@dimen/tab_indicator_height"
+            app:tabTextColor="@color/white" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/capture_photo"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dip"
+            android:drawableTop="@drawable/ic_camera_alt_24dp"
+            android:text="@string/menu_take_photo"
+            android:textColor="@color/white" />
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/capture_video"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dip"
+            android:drawableTop="@drawable/ic_videocam_24dp"
+            android:text="@string/menu_take_video"
+            android:textColor="@color/white" />
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/capture_audio"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dip"
+            android:drawableTop="@drawable/ic_mic_24dp"
+            android:text="@string/menu_record_audio"
+            android:textColor="@color/white" />
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/goto_import"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dip"
+            android:drawableTop="@drawable/ic_attach_file_24dp"
+            android:text="@string/menu_import_media"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:filterTouchesWhenObscured="true"
+        android:layout_width="@dimen/fab_size_normal"
+        android:layout_height="@dimen/fab_size_normal"
+        android:id="@+id/button_submit"
+        android:src="@drawable/ic_send_48dp"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchor="@+id/button_container"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        app:layout_anchorGravity="top|end"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearlayout_contact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/contact_picture"
+            android:filterTouchesWhenObscured="true"
+            android:layout_width="@dimen/contact_icon_dimen"
+            android:layout_height="@dimen/contact_icon_dimen"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_row_padding"
+            android:layout_marginBottom="@dimen/activity_row_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_contact_blue_24dp"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/contact_picture"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_subtitle" />
+
+        <include layout="@layout/view_legal_tags"
+            android:id="@+id/legal_tags"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="@dimen/activity_row_padding"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_row_padding"/>
+
+        <RelativeLayout
+            android:id="@+id/expanded_contact_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/legal_tags"
+            android:layout_marginStart="@dimen/activity_horizontal_margin_inset"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin_padding"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/phone_icon"
+                android:layout_marginTop="@dimen/activity_row_padding"
+                android:layout_width="@dimen/small_action_icon_size"
+                android:layout_height="@dimen/small_action_icon_size"
+                android:src="@drawable/ic_call_black_24dp" />
+
+            <TextView
+                android:id="@+id/phone_office"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/phone_icon"
+                android:layout_marginStart="@dimen/activity_horizontal_margin_inset"
+                android:layout_marginTop="@dimen/small_action_icon_padding"
+                android:layout_toEndOf="@id/phone_icon"
+                android:autoLink="phone"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/mobile_phone_icon"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="@dimen/small_action_icon_size"
+                android:layout_height="@dimen/small_action_icon_size"
+                android:src="@drawable/ic_stay_current_portrait_black_24dp"
+                android:layout_below="@+id/phone_icon"/>
+
+            <TextView
+                android:id="@+id/phone_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_action_icon_padding"
+                android:layout_alignTop="@+id/mobile_phone_icon"
+                android:layout_marginStart="@dimen/activity_horizontal_margin_inset"
+                android:layout_toEndOf="@id/mobile_phone_icon"
+                android:autoLink="phone"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/office_icon"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="@dimen/small_action_icon_size"
+                android:layout_height="@dimen/small_action_icon_size"
+                android:src="@drawable/ic_domain_black_24dp"
+                android:layout_below="@+id/mobile_phone_icon"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_action_icon_padding"
+                android:layout_alignTop="@id/office_icon"
+                android:layout_marginStart="@dimen/activity_horizontal_margin_inset"
+                android:layout_toEndOf="@+id/office_icon"
+                android:autoLink="map"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="4dip"
+        android:background="@color/colorDivider" />
+</LinearLayout>

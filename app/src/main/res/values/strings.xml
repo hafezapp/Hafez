@@ -1,0 +1,172 @@
+<resources>
+
+    <!-- New -->
+    <string name="lawyer_disclaimer_public">This list is compiled from public information, and presence on this list does not entail endorsement of HRANA or Hafez.</string>
+    <string name="find_program_prompt">Search the app store for an app that can do this? Please be careful when downloading additional apps to your device.</string>
+
+    <string name="tutorial_1_title">Send a report</string>
+    <string name="tutorial_1_message">To send a report, type above and click here when you\'re done.</string>
+    <string name="tutorial_2_title">Add media files</string>
+    <string name="tutorial_2_message">You can attach or capture media files to send with your report</string>
+    <string name="tutorial_3_title">News and resources</string>
+    <string name="tutorial_3_message">You can also browse the latest news from HRANA, or check out our legal resources section</string>
+    <string name="tutorial_4_title">See more options</string>
+    <string name="tutorial_4_message">Review your settings and additional options</string>
+    <string name="tutorial_5_title">Get started with Hafez</string>
+    <string name="tutorial_5_message">That\'s it! You can review these instructions any time.</string>
+    <string name="preference_category_main">Main</string>
+    <string name="preference_category_network">General</string>
+    <string name="user_license_agreement">User Agreement</string>
+
+    <!-- Nav Drawer -->
+
+    <!-- General -->
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="clear">Clear</string>
+    <string name="ok">OK</string>
+    <string name="none">None</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+    <!-- REPORTS -->
+    <!-- General -->
+    <string name="hint_what_happened">What happened? Start typing here&#8230;</string>
+    <string name="hint_tags">Add tags:</string>
+    <string name="confirm_submit_report">Submit Report</string>
+    <string name="hint_optinal_details">Add optional details and send.</string>
+
+    <!-- Report Submission -->
+    <string name="title_leave_submission">Leave without submitting?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="send_now">Send now</string>
+    <string name="submit_report">Submit a report</string>
+    <string name="tag_hr">human rights</string>
+    <string name="tag_news">news</string>
+    <string name="hint_email">Email</string>
+
+    <!-- Report timeout - **not currently enabled** -->
+    <string name="report_timeout">Report timeout</string>
+
+    <!-- Attachment menu -->
+    <string name="view_attachment">View attachment</string>
+    <string name="remove_attachment">Remove attachment</string>
+
+    <!--Status messages -->
+    <string name="offline">Offline</string>
+    <string name="hint_news_offline">Check your internet connection to access the latest Hrana news. It\'s also possible you have configured this app to send all connections through Tor, which sometimes causes problems with our newsfeed. We\'re sorry for the inconvenience.</string>
+    <string name="no_network_access_title">No Network Access</string>
+    <string name="no_network_access_message">No network access detected. Please connect to the internet or enable submissions via mobile phone data to submit a report.</string>
+
+    <!-- SETTINGS -->
+    <!-- General -->
+    <string name="view_onboarding_again">Show onboarding again</string>
+
+    <!--Uninstall settings-->
+    <string name="uninstall_options">Uninstall options</string>
+    <string name="show_uninstall_in_menu">Show menu option</string>
+    <string name="one_click_uninstall">One click uninstall</string>
+
+    <!-- App timeout/report timeout settings -->
+
+    <string name="set_uninstall_options">Hide or show the quick-uninstall menu option.</string>
+
+    <!-- Gallery storage is currently not an available preference -->
+    <!--<string name="gallery_storage_mode_title">Media Storage</string>-->
+    <!--<string name="gallery_storage_mode_summary">Store media captured with Hafez in the Gallery.</string>-->
+    <!--<string name="title_disable_gallery_storage">Disable Gallery Storage</string>-->
+    <!--<string name="message_disable_gallery_storage">If you disable gallery storage, media you capture within the app will not be visible in your Photo Gallery. However, you will not be able to access this media without root access.</string>-->
+
+    <!-- Network/data settings -->
+    <string name="upload_over_data_explanation">Use data for report submissions if no wifi network is available. This allows you to submit reports without wifi, however, this option could mean more expensive data charges. Please refer to your mobile carrier for more information on your data costs.</string>
+    <string name="upload_over_data">Allow uploads on data</string>
+    <string name="upload_over_data_summary">Allow mobile data use.</string>
+
+    <!-- Settings keys -->
+    <string name="upload_over_data_key" translatable="false">UploadOverDataKey</string>
+    <string name="can_skip_onboarding_key" translatable="false">CanSkipOnboardingKey</string>
+    <string name="restrict_access_tor_key" translatable="false">AllowAccessTorOnlyKey</string>
+    <string name="report_timeout_key" translatable="false">ReportTimeoutKey</string>
+    <string name="report_timeout_value_key" translatable="false">ReportTimeoutValueKey</string>
+    <string name="uninstall_options_key" translatable="false">UninstallOptionsKey</string>
+    <string name="uninstall_options_value" translatable="false">UninstallOptionsValue</string>
+    <string name="onboarding_complete_homepage_key" translatable="false">OnboardingCompleteHomepageKey</string>
+    <string name="onboarding_complete_key" translatable="false">OnboardingCompleteKey</string>
+    <string name="eua_accepted_key" translatable="false">IsEuaAcceptedKey</string>
+    <string name="last_content_check_date" translatable="false">LastContentDateCheckedKey</string>
+    <string name="last_content_update_successful_key" translatable="false">LastContentUpdateSuccessKey</string>
+
+    <!-- Other -->
+    <string name="no_report_body_supplied" translatable="false">Empty report body.</string>
+    <string name="eua_rejected">@string/reject</string>
+    <string name="eua_instructions">@string/user_license_agreement</string>
+
+    <!-- Contacts-->
+    <string name="filter">Filter by profession&#8230;</string>
+    <string name="filter_explanation">Leave blank to show all</string>
+    <string name="law_type_1">LawType1</string>
+    <string name="law_type_2">LawType2</string>
+    <string name="law_type_3">LawType3</string>
+    <string name="law_type_4">LawType4</string>
+    <string name="law_type_5">LawType5</string>
+    <string name="law_type_6">LawType6</string>
+
+    <!--Activities-->
+    <string name="app_name">Hafez</string>
+    <string name="app_intro">Welcome</string>
+    <string name="news">News</string>
+    <string name="action_settings">Settings</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="legal_directory">Legal Directory</string>
+
+    <!-- Status/Progress, Loading, Updates -->
+    <string name="submit_without_orbot">Submit without a proxy</string>
+    <string name="success">Success</string>
+    <string name="download_success">Download success</string>
+    <string name="install_update">Install update</string>
+    <string name="update_prompt_title">Update Available</string>
+    <string name="update_prompt">An update to Hafez is available. Click to download this update.</string>
+    <string name="report_sent_confirmation">Thank you! Report Successfully sent.</string>
+    <string name="progress_message_send">Sending your report&#8230;</string>
+
+    <!-- Errors -->
+    <string name="error_timeout_default_time">You have chosen to set report expiry, but have not provided at time. The default expiry time is ten minutes.</string>
+    <string name="error_invalid_media_type">File Type not recognized</string>
+    <string name="capture_error">Error capturing media.</string>
+    <string name="error_capture_data_device_permission">Error capturing media. Have you enabled storage permissions?</string>
+    <string name="error_no_capable_program">No applications found with this capability.</string>
+    <string name="error_no_preview_capable">Sorry, no applications able to show preview.</string>
+    <string name="error_update_failed">Update failed.</string>
+    <string name="error_submission">Submission error.</string>
+    <string name="server_error_submission">Sorry, we encountered an error.</string>
+    <string name="error_orbot_title">Proxy Error</string>
+    <string name="error_orbot_message">Do you want to continue without using a proxy? Proxies help keep your network activity disguised. Continuing without a proxy may have additional security risks. If you are concerned about this, consider installing Orbot.</string>
+    <string name="error_client_id_title">Verification error</string>
+    <string name="error_client_id_message">Sorry, we could not process your submission request. (Error : Client ID).</string>
+    <string name="error">Error</string>
+    <string name="error_max_submissions_message">You have reached your submission quota for the day. If you believe this is an error, please contact us. See About for more information.</string>
+    <string name="error_oversize_submission_message">Your submission is too large. Our maximum capacity currently is 100MB per submission. Sorry for the inconvenience.</string>
+    <string name="file_type_not_determined">One or more file types could not be determined and we are unable to send these files. Sorry for the inconvenience.</string>
+
+    <!-- Media -->
+    <string name="menu_import_media">Import Media</string>
+    <string name="menu_take_photo">Take Photo</string>
+    <string name="menu_take_video">Take Video</string>
+    <string name="menu_record_audio">Record Audio</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Welcome to Hafez</string>
+    <string name="onboarding_title_2">Your voice. Your impact.</string>
+    <string name="onboarding_title_3">Trusted news and resources at your fingertips.</string>
+    <string name="onboarding_title_4">Understand the features&#8212;and the risks.</string>
+    <string name="onboarding_text_1">Bring injustice to light and become a defender of human rights.</string>
+    <string name="onboarding_text_2">Write incident reports and attach images, videos or soundclips.</string>
+    <string name="onboarding_text_3">Browse recent news or check out our legal resources section.</string>
+    <string name="onboarding_text_4">You\'ll be asked next to read our user agreement. You can review this information any time.</string>
+    <string name="onboarding_text_eua_accepted">You\'ll find our user agreement in the Options menu, should you wish to review it.</string>
+
+</resources>

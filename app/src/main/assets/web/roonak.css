@@ -1,0 +1,40 @@
+.nav .item a {
+	color: #3F51B5 !important;
+}
+
+.section-title
+{
+	text-align: center;
+	font-size: 24px;
+}
+
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%)!important;
+  border-radius: 4px;
+}
+
+.panel-info > .panel-heading {
+ background-color: #3F51B5;
+}
+
+.panel-info-topics > .panel-heading {
+ text-align: center;
+ background-color: #3F51B5;
+ border-radius: 4px;
+}
+
+.panel-info-topics > .panel-heading > .panel-title {
+ margin-top: 0;
+ margin-bottom: 0;
+ font-size: 16px;
+ color: white;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 45px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}

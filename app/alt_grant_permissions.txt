@@ -1,0 +1,27 @@
+# Alternative gradle method to grant runtime permissions for testing
+# Thanks to https://github.com/afterecho/permissionsgrantingtest/blob/master/app/build.gradle
+
+android.applicationVariants.all { variant ->
+    def applicationId = variant.applicationId
+    def adb = android.getAdbExe().toString()
+    def variantName = variant.name.capitalize()
+    def grantPermissionTask = tasks.create("create${variantName}Permissions") << {
+        println "Granting permissions"
+        "${adb} shell pm grant ${applicationId} android.permission.WRITE_EXTERNAL_STORAGE".execute()
+        "${adb} shell pm grant ${applicationId} android.permission.READ_EXTERNAL_STORAGE".execute()
+        println "...Permissions granted"
+    }
+    grantPermissionTask.description = "Grant runtime permissions for testing"
+    grantPermissionTask.group = "permissions"
+    grantPermissionTask.dependsOn("install${variant.name.capitalize()}")
+}
+
+afterEvaluate {
+    // When launching tests from Android Studio, it seems that only the assemble tasks
+    // get called directly, not the install* versions
+    tasks.each { task ->
+        if (task.name.startsWith('assembleDebugAndroidTest')) {
+            task.dependsOn grantPermissionTask
+        }
+    }
+}

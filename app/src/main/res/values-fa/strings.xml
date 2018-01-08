@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lawyer_disclaimer_public">این لیست از منابع عمومی جمع‌آوری شده است. حضور اشخاص در آن به معنای تایید اپلیکیشن حافظ و خبرگزاری هرانا از طرف آنها نیست.</string>
+    <string name="find_program_prompt">جستجو در گوگل‌پلی استور برای اپلیکیشنی که این قابلیت را داشته باشد؟ هنگام دانلود اپلیکیشن‌ها مراقب امنیت و درخواست دسترسی به دستگاه خود باشید.</string>
+    <string name="tutorial_1_title">ارسال گزارش</string>
+    <string name="tutorial_1_message">برای ارسال گزارش در قسمت بالا تایپ کنید و بعد از اتمام آن، اینجا کلیک کنید.</string>
+    <string name="tutorial_2_title">اضافه کردن فایل‌های رسانه‌ای</string>
+    <string name="tutorial_2_message">می‌توانید فایل‌های رسانه‌ای را ضبط و ضمیمه‌ی گزارش خود کنید</string>
+    <string name="tutorial_3_title">اخبار و منابع</string>
+    <string name="tutorial_3_message">آخرین اخبار سازمان هرانا را بخوانید یا به قسمت مطالب حقوقی سر بزنید</string>
+    <string name="tutorial_4_title">تنظیمات بیشتر</string>
+    <string name="tutorial_4_message">بررسی تنظیمات و گزینه‌های بیشتر</string>
+    <string name="tutorial_5_title">شروع استفاده از حافظ</string>
+    <string name="tutorial_5_message">تمام! شما می توانید این دستورالعمل‌ها را در هر زمان بررسی کنید.</string>
+    <string name="user_license_agreement">توافق‌نامه‌ی کاربر</string>
+    <string name="preference_category_main">اصلی</string>
+    <string name="preference_category_network">شبکه</string>
+
+    <!-- Law types: lawyers' directory -->
+    <string name="law_type_1">امنیتی سیاسی</string>
+    <string name="law_type_2">اتباع خارجی</string>
+    <string name="law_type_3">مواد مخدر</string>
+    <string name="law_type_4">زنان</string>
+    <string name="law_type_5">کودکان</string>
+    <string name="law_type_6">قتل</string>
+
+    <!-- NavigationDrawer -->
+    <string name="action_settings">تنظیمات</string>
+
+    <!-- General -->
+    <string name="skip">بگذریم</string>
+    <string name="next">بعدی</string>
+    <string name="clear">پاک کردن</string>
+    <string name="ok">تایید</string>
+    <string name="none">هیچ</string>
+    <string name="dismiss">لغو</string>
+    <string name="about">درباره</string>
+    <string name="settings">تنظیمات</string>
+    <string name="accept"> قبول</string>
+    <string name="reject">رد</string>
+
+    <!-- REPORTS -->
+    <!-- General -->
+    <string name="hint_what_happened">چه اتفاقی افتاده؟ اینجا شروع کنید به نوشتن&#8230;</string>
+    <string name="hint_tags">تگ اضافه کنید:</string>
+    <string name="confirm_submit_report">ثبت گزارش</string>
+    <string name="hint_optinal_details">اضافه کردن جزییات اختیاری و ارسال.</string>
+
+    <!-- Report Submission -->
+    <string name="title_leave_submission">بدون ثبت گزارش خارج میشوید؟</string>
+    <string name="yes">بله</string>
+    <string name="cancel">لغو</string>
+    <string name="submit">ثبت</string>
+    <string name="send_now">ارسال شود</string>
+    <string name="submit_report">یک گزارش ثبت کنید</string>
+    <string name="tag_hr">حقوق بشری</string>
+    <string name="tag_news">خبری</string>
+    <string name="hint_email">ایمیل</string>
+
+    <!-- Report timeout - **not currently enabled** -->
+    <string name="report_timeout">گزارش منقضی شد</string>
+
+    <!-- Attachment menu -->
+    <string name="view_attachment">ضمیمه را ببینید</string>
+    <string name="remove_attachment">ضمیمه را حذف کنید</string>
+
+    <!--Status messages -->
+    <string name="offline">آفلاین</string>
+    <string name="hint_news_offline">اتصال خود به اینترنت را برای دریافت آخرین گزارشات هرانا بررسی کنید. همچنین ممكن است تنظیمات اپلیكیشن شما برای استفاده از تور بعضی مواقع باعث خطا در دریافت فید خبری هرانا شود. از بابت مشكل پیش آمده متاسفیم.</string>
+    <string name="no_network_access_title">دسترسی به شبكه وجود ندارد</string>
+    <string name="no_network_access_message">دسترسی به شبكه وجود ندارد. لطفا به اینترنت متصل شوید یا اینترنت تلفن خود را فعال کنید تا بتوانید گزارش را ثبت کنید.</string>
+
+    <!-- SETTINGS -->
+    <!-- General -->
+    <string name="view_onboarding_again">فرآیند آشنایی را دوباره ببینید</string>
+
+    <!--Uninstall settings-->
+    <string name="uninstall_options">گزینه های حذف برنامه</string>
+    <string name="show_uninstall_in_menu">نمایش منوی گزینه ها</string>
+    <string name="one_click_uninstall">حذف با یک کلیک</string>
+
+    <!-- App timeout/report timeout settings -->
+
+    <string name="set_uninstall_options">مخفی كردن یا نمایش گزینه پاكسازی سریع اپلیكیشن</string>
+
+    <!-- Network/data settings -->
+    <string name="upload_over_data_explanation">در صورت نبودن وای فای از اینترنت تلفن خود برای ارسال گزارش استفاده کنید. این گزینه میتواند نسبت به استفاده از وای فای هزینه مالی بیشتری برای شما داشته باشد. لطفا برای كسب اطلاعات بیشتر در رابطه با هزینه ها به سرویس دهنده تلفن همراه خود مراجعه کنید.</string>
+    <string name="upload_over_data">اجازه ارسال دیتا از طریق شبكه تلفن همراه</string>
+    <string name="upload_over_data_summary">اجازه استفاده از اینترنت تلفن همراه</string>
+
+    <!-- Contacts-->
+    <string name="filter">فیلتر كردن بر اساس تخصص&#8230;</string>
+    <string name="filter_explanation">خالی بگذارید تا تمام موارد را ببینید</string>
+
+    <!--Activities-->
+    <string name="app_name">حافظ</string>
+    <string name="app_intro">خوش آمدید</string>
+    <string name="news">اخبار</string>
+    <string name="legal_directory">راهنمای حقوقی</string>
+
+    <!-- Status/Progress, Loading, Updates -->
+    <string name="submit_without_orbot">ثبت گزارش بدون استفاده از پروكسی</string>
+    <string name="success">موفقیت</string>
+    <string name="download_success">دانلود با موفقیت انجام شد</string>
+    <string name="install_update">نصب</string>
+    <string name="update_prompt_title">به‌روزرسانی</string>
+    <string name="update_prompt">بروزرسانی روناك در دسترس است برای بروزرسانی كلیك کنید</string>
+    <string name="report_sent_confirmation">متشكریم، گزارش با موفقیت ارسال شد</string>
+    <string name="progress_message_send">گزارش خود را ارسال کنید&#8230;</string>
+
+    <!-- Errors -->
+    <string name="error_timeout_default_time">شما گزینه منقضی شدن گزارش را انتخاب كردید ولی هیچ زمانی برای آن تعیین نكردید. زمان پیش فرض ده دقیقه است.</string>
+    <string name="error_invalid_media_type">نوع فایل تشخیص داده نشد</string>
+    <string name="capture_error">خطای ضبط مدیا</string>
+    <string name="error_capture_data_device_permission">خطای دسترسی به مدیا. آیا اجازه دسترسی روناك به گالری خود را داده اید؟</string>
+    <string name="error_no_capable_program">هیچ اپلیكیشنی با این ظرفیت پیدا نشد.</string>
+    <string name="error_no_preview_capable">متاسفیم، برنامه قادر به پخش پیش نمایش نیست.</string>
+    <string name="error_update_failed">خطای بارگذاری.</string>
+    <string name="error_submission">خطا در هنگام ثبت</string>
+    <string name="server_error_submission">متاسفیم، با خطایی مواجه هستیم</string>
+    <string name="error_orbot_title">خطای پروكسی</string>
+    <string name="error_orbot_message">آیا میخواهید بدون استفاده از پروكسی ادامه دهید؟ پروكسی به ارتقای امنیت شما كمك می كند. ادامه دادن بدون پروكسی میتواند ریسك امنیتی بیشتری به همراه داشته باشد. اگر نگران امنیت خود هستید نصب اوربات یک گزینه است که نصب آن را میتوانید در نظر داشته باشید.</string>
+    <string name="error_client_id_title">خطای تایید</string>
+    <string name="error_client_id_message">متاسفیم، نمیتوانیم درخواست ثبت شما را انجام دهیم. خطایابی؛ لطفا مطمن شوید شما قرارداد کاربری را پذیرفته اید و حداقل یكبار پیش تر اپلیكیشن را زمانی كه به اینترنت متصل هستید اجرا كرده اید.</string>
+    <string name="error">خطا</string>
+
+    <string name="error_max_submissions_message">از شما عذر می‌خواهیم. شما به سقف سهمیه‌ی ارسالی فایل برای امروز رسیدید.</string>
+    <string name="file_type_not_determined">از شما عذر می‌خواهیم. یک یا چند نوع از فایل‌ها غیرقابل تشخیص‌اند و به همین دلیل ارسال ناموفق بود.</string>
+    <string name="error_oversize_submission_message">از شما عذر می‌خواهیم. حجم فایل ارسالی شما بسیار بزرگ است. حداکثر ظرفیت کنونی برای هر ارسال ۱۰۰ مگابایت است.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">به حافظ خوش آمدید</string>
+    <string name="onboarding_title_2">صدای شما. تاثیرگذاری شما</string>
+    <string name="onboarding_title_3">اخبار و منابع مورد اعتماد را زیر انگشتان خود داشته باشید</string>
+    <string name="onboarding_title_4">شناخت از امكانات&#8212;و شناخت مخاطرات.</string>
+    <string name="onboarding_text_1">مدافع حقوق بشر شوید و بی عدالتی را نمایان کنید</string>
+    <string name="onboarding_text_2">گزارشی از یك واقعه بنویسید و تصاویر، اسناد، فیلم یا صدا را ضمیمه کنید</string>
+    <string name="onboarding_text_3">گزارشات جدید را مطالعه و از بانک داده های حقوقی ما بازدید کنید</string>
+    <string name="onboarding_text_4">لطفا خط مشی ما در مورد حفظ حریم خصوصی و امنیت را بررسی کنید و توافقنامه كاربری ما را بپذیرید. شما میتوانید این اطلاعات را هر زمانی بررسی کنید.</string>
+    <string name="onboarding_text_eua_accepted">برای مرور توافق‌نامه‌ی کاربری به قسمت تنظیمات رجوع کنید.</string>
+
+
+    <string name="menu_import_media">رسانه وارد کن</string>
+    <string name="menu_take_photo">عکس بگیر</string>
+    <string name="menu_take_video">ویدیو بگیر</string>
+    <string name="menu_record_audio">صدا ضبط کن</string>
+
+    <!-- Other -->
+    <string name="eua_rejected">@string/reject</string>
+    <string name="eua_instructions">@string/user_license_agreement</string>
+
+</resources>

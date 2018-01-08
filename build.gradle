@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.gms:google-services:3.1.2'
+        classpath 'io.fabric.tools:gradle:1.24.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+
+// Versions
+ext {
+    compileSdkVersion = 26
+    targetSdkVersion = 25
+    minSdkVersion = 17
+    buildToolsVersion = '26.0.2'
+
+    supportLibVersion = '26.1.0'
+
+    junitVersion = '4.1.2'
+    testRunnerVersion = '1.0.0'
+    espressoVersion = '3.0.0'
+    greenCoffeeVersion = '2.0.1'
+    daggerVersion = '2.8'
+    butterknifeVersion = '8.4.0'
+    retrofitVersion = '2.1.0'
+    gmsVersion = '11.4.2'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

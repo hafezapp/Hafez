@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layoutDirection="locale">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textDirection="locale"
+        android:textSize="@dimen/text_size_subtitle"
+        android:layout_marginStart="8dip"
+        android:layout_marginTop="8dip"
+        android:text="@string/hint_optinal_details"/>
+    
+    <EditText
+        android:id="@+id/edittext_email"
+        android:layout_marginTop="@dimen/activity_row_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dip"
+        android:layout_gravity="start"
+        android:background="@android:color/transparent"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:textDirection="locale" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dip"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tagsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/small_action_icon_padding"
+            android:text="@string/hint_tags"
+            android:textColor="@color/gray"
+            android:textDirection="locale" />
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/tag_hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dip"
+            android:layout_marginStart="6dip"
+            android:layout_toEndOf="@+id/tagsLabel"
+            android:background="@drawable/tag_background_selector"
+            android:paddingEnd="@dimen/tag_padding"
+            android:paddingStart="@dimen/tag_padding"
+            android:text="@string/tag_hr"
+            android:textColor="@color/gray"/>
+
+        <org.hrana.hafez.view.button.FilterTouchButton
+            android:id="@+id/tag_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dip"
+            android:layout_marginStart="6dip"
+            android:layout_toEndOf="@+id/tag_hr"
+            android:background="@drawable/tag_background_selector"
+            android:paddingEnd="@dimen/tag_padding"
+            android:paddingStart="@dimen/tag_padding"
+            android:text="@string/tag_news"
+            android:textColor="@color/gray"/>
+    </RelativeLayout>
+</LinearLayout>

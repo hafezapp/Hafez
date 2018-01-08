@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="tab_icons">
+        <item>@drawable/legal</item>
+        <item>@drawable/contact</item>
+        <item>@drawable/news</item>
+        <item>@drawable/report</item>
+
+    </array>
+
+    <string-array name="array_uninstall_options">
+        <item>@string/none</item>
+        <item>@string/show_uninstall_in_menu</item>
+    </string-array>
+
+    <string-array name="onboardTitles">
+        <item>@string/onboarding_title_4</item>
+        <item>@string/onboarding_title_3</item>
+        <item>@string/onboarding_title_2</item>
+        <item>@string/onboarding_title_1</item>
+
+    </string-array>
+    <string-array name="onboardContents">
+        <item>@string/onboarding_text_4</item>
+        <item>@string/onboarding_text_3</item>
+        <item>@string/onboarding_text_2</item>
+        <item>@string/onboarding_text_1</item>
+    </string-array>
+
+    <string-array name="onboardContentsEuaAccepted">
+        <item>@string/onboarding_text_eua_accepted</item>
+        <item>@string/onboarding_text_3</item>
+        <item>@string/onboarding_text_2</item>
+        <item>@string/onboarding_text_1</item>
+    </string-array>
+
+    <integer-array name="backgrounds">
+        <item>@color/colorPrimary</item>
+        <item>@color/blue</item>
+        <item>@color/teal</item>
+        <item>@color/colorPrimary</item>
+    </integer-array>
+</resources>
