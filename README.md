@@ -17,6 +17,9 @@ Hafez is an incident report submission platform allowing users to create and sub
 ### Download
 Application is available on Google Play https://play.google.com/store/apps/details?id=org.hrana.hafez.
 
+### Security Audit
+[Report](https://github.com/hafezapp/Hafez/blob/master/docs/Hafez%20Security%20Audit.pdf)
+
 ### License
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
